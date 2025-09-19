@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta tu Turno</title>
+  <style>
+    body {
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('img/indigena.jpg') repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(244, 225, 198, 0.85);
+      z-index: -1;
+    }
+    .contenedor {
+      background: #fffaf3;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      text-align: center;
+      width: 100%;
+      max-width: 400px; /* se ajusta en pantallas grandes */
+      box-sizing: border-box;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #6b4226;
+      font-size: 1.8em;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #d4a373;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+    button {
+      background: #a0522d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: background 0.3s ease, transform 0.2s;
+      width: 100%; /* botón ocupa todo en móviles */
+    }
+    button:hover {
+      background: #8b3e2f;
+      transform: translateY(-2px);
+    }
+    .resultado {
+      margin-top: 25px;
+      padding: 15px;
+      background: #fbeee6;
+      border: 2px solid #d4a373;
+      border-radius: 15px;
+      font-size: 1.2em;
+      color: #5a3e2b;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+    }
+    .resultado span {
+      font-weight: bold;
+      color: #a0522d;
+      font-size: 1.4em;
+    }
+
+    /* 📱 Ajustes para móviles pequeños */
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.4em;
+      }
+      .contenedor {
+        padding: 20px;
+        border-radius: 15px;
+      }
+      button {
+        font-size: 1em;
+        padding: 10px;
+      }
+      .resultado {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Consulta tu Turno</h2>
+    <input type="text" placeholder="Ingresa tu número de celular">
+    <button>Consultar</button>
+    <div class="resultado">
+      Tu turno es: <span>25</span><br>
+      Tiempo de espera: <span>15 min</span>
+    </div>
+  </div>
+</body>
+</html>
+
